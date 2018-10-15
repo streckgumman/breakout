@@ -1,0 +1,24 @@
+package exercises.ex3breakout;
+
+public abstract class AbstractMovable extends AbstractPositionable {
+
+    private double dx;          //speed x
+    private double dy;          //speed y
+
+    public AbstractMovable(double x, double y, double dx, double dy, double width, double height) {
+        super(x, y, width, height);
+        this.dx = dx;
+        this.dy = dy;
+    }
+
+    public double getDx() {
+        return dx;
+    }
+
+    public double getDy() {
+        return dy;
+    }
+
+
+
+}
