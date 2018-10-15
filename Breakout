@@ -25,11 +25,13 @@ public class Breakout {
 
     private Ball ball;
     private Paddle paddle;
+    private final List<Wall> walls;
 
 
-    public Breakout(Ball ball, Paddle paddle) {
+    public Breakout(Ball ball, Paddle paddle, List<Wall> walls) {
         this.ball = ball;
         this.paddle = paddle;
+        this.walls = walls;
     }
 
 
@@ -37,6 +39,20 @@ public class Breakout {
 
     void update(long now) {
         // TODO The game loop , move check collisions etc.
+        ball.move();
+        for(Wall w : walls){
+            if (ball.intersect(w)){
+                if (w.getDir() == Wall.Dir.HORIZONTAL){
+                    ball.setDy(-ball.getDy());
+
+                }else{              //vertical
+                    ball.setDx(-ball.getDx());
+                }
+            }
+        }
+
+
+        paddle.move();
     }
 
 
