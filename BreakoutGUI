@@ -11,6 +11,9 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static exercises.ex3breakout.Breakout.GAME_HEIGHT;
 import static exercises.ex3breakout.Breakout.GAME_WIDTH;
 
@@ -57,10 +60,14 @@ public class BreakoutGUI extends Application {
         // TODO Create parts of the model
         Ball ball = new Ball(200, 200);
         Paddle paddle = new Paddle(200, 400);
-        breakout = new Breakout(ball, paddle);
+        Wall left = new Wall(0,0,2,GAME_HEIGHT, Wall.Dir.VERTICAL);
+        Wall top = new Wall(0,0,GAME_WIDTH,2, Wall.Dir.HORIZONTAL);
+        Wall right = new Wall(GAME_WIDTH,0,2,GAME_HEIGHT, Wall.Dir.VERTICAL);
+        //Wall bottom = new Wall(GAME_WIDTH,0,0,2, Wall.Dir.HORIZONTAL);
 
+        List<Wall> walls = Arrays.asList(left, top, right);
 
-
+        breakout = new Breakout(ball, paddle, walls);
         // Finally
         // TODO breakout = call contructor for Breakout with all parts
 
