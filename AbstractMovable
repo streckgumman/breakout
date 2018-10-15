@@ -5,7 +5,7 @@ public abstract class AbstractMovable extends AbstractPositionable {
     private double dx;          //speed x
     private double dy;          //speed y
 
-    public AbstractMovable(double x, double y, double dx, double dy, double width, double height) {
+    public AbstractMovable(double x, double y, double width, double height, double dx, double dy) {
         super(x, y, width, height);
         this.dx = dx;
         this.dy = dy;
