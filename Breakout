@@ -53,6 +53,10 @@ public class Breakout {
 
 
         paddle.move();
+        if (ball.intersect(paddle)){
+            ball.setDy(-ball.getDy());
+        }
+
     }
 
 
