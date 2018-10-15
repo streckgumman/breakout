@@ -1,0 +1,28 @@
+package exercises.ex3breakout;
+
+public abstract class AbstractPositionable {
+    
+    private double x;           //top left corner
+    private double y;
+
+    private double width;
+    private double height;
+    
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    
+
+    public double getWidth() {
+        return width;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+}
