@@ -16,13 +16,13 @@ public class Paddle extends AbstractMovable {
 
 
 
-    public Paddle(double x, double y, double dx, double dy, double width, double height) {
-        super(x, y, dx, dy, width, height);
+    public Paddle(double x, double y, double width, double height, double dx, double dy) {
+        super(x, y, width, height, dx, dy);
     }
 
 
     public Paddle(double x, double y){
-        this(x, y, PADDLE_SPEED, 0, PADDLE_WIDTH, PADDLE_HEIGHT);
+        this(x, y, PADDLE_WIDTH, PADDLE_HEIGHT,PADDLE_SPEED, 0);
     }
 
 
