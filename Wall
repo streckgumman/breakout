@@ -1,0 +1,19 @@
+package exercises.ex3breakout;
+
+public class Wall extends AbstractPositionable{
+
+    public Wall(double x, double y, double width, double height, Dir dir) {
+        super(x, y, width, height);
+        this.dir = dir;
+    }
+
+    public enum Dir {
+        HORIZONTAL, VERTICAL;
+    }
+
+    private final Dir dir;
+
+    public Dir getDir() {
+        return dir;
+    }
+}
