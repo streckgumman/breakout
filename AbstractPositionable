@@ -1,6 +1,6 @@
 package exercises.ex3breakout;
 
-public abstract class AbstractPositionable {
+public abstract class AbstractPositionable implements IPositionable {
 
     private double x;           //top left corner
     private double y;
@@ -15,10 +15,11 @@ public abstract class AbstractPositionable {
         this.height = height;
     }
 
+    @Override
     public double getX() {
         return x;
     }
-
+    @Override
     public double getY() {
         return y;
     }
@@ -30,11 +31,11 @@ public abstract class AbstractPositionable {
     public void setY(double y) {
         this.y = y;
     }
-
+    @Override
     public double getWidth() {
         return width;
     }
-
+    @Override
     public double getHeight() {
         return height;
     }
